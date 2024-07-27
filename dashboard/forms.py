@@ -14,3 +14,14 @@ class HomeworkForm(forms.ModelForm):
         model = Homework
         widgets = {'due': DateInput()}
         fields = ['subject', 'title', 'description','due','is_finished' ]
+
+
+class DashboardForm(forms.Form):
+    text = forms.CharField(max_length=100, label="Search Here:")
+
+
+class TodoForm(forms.ModelForm):
+    class Meta:
+        model = Todo
+        fields = ['title', 'is_finished']
+        
