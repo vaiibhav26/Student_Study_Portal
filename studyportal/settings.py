@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
-
+ 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -132,4 +132,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR/"static"]
 
+LOGIN_REDIRECT_URL = 'home'
+LOGIN_URL = 'login'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
